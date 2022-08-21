@@ -1,0 +1,343 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #212534;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+/* ======================== */
+/* Everything here is pretty straight forward so I don't think I have to explain.*/
+.button{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 3px solid 
+    #3c67e3;
+    border-radius: 10px;
+}
+
+.button:hover{
+    animation: pulsate 1s 
+    ease-in-out; /*The pulsate animation is added on hover. You could also add this on .button:focus and it will add it when clicking the button as well.*/
+}
+
+@keyframes pulsate {
+    /* 
+        Here we have two shadows. You can add as many as you want by using different offset values as long as you separate it with a comma.
+        The values are as follow: offset-x | offset-y | blur-radius | color
+    */
+    0%{
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+}
+
+
+body{
+    --bg-clr:#131313;
+    background-color:var(--bg-clr);
+}
+
+.img-wrapper{
+    max-width:150px;
+    position:relative;
+}
+
+.img-wrapper img{
+    width:100%;
+    display:block;
+    border-radius:50%;
+    
+}
+
+.img-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:-15px;
+    border: 6px solid var(--bg-clr);
+    border-top-color:rgb(76, 216, 250);
+    border-bottom-color:#3efc5d;
+    border-radius:50%;
+    z-index:-1;
+    animation:spin 3s linear infinite;
+    
+}
+
+@keyframes spin{
+   to{transform:rotate(360deg);}
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* General styles */
+body{
+    background-color: #1a1b26;
+    font-family: 'Poppins', sans-serif;
+}
+/* General styles end */
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1fe8b6;
+    padding: 20px 50px;
+    border: 3px solid #1fe8b6;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: all .5s ease-in;
+}
+
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+
+/*
+Explanation
+
+First, create a button with the desired styles.
+Since we are going to be using pseudo elements,
+it’s important that you add the position property and set it to relative.
+Now, create the pseudo elements before and after.
+Since they both share some styles, we will select them both and apply those said styles.
+The width and height are set to 40px.
+This number could be smaller or larger depending on the look you want.
+We also inherit the border styles from the parent and then add a transition for the animation.
+
+Now, select the pseudo elements individually to offset the starting top, left, right, and bottom positions by using a negative value.
+Then use the shorthand border-width property to target the top and left width for the :before and right and bottom for the :after.
+
+Finally, select both buttons once more and specify that you want a :hover state noting that you want the styles to apply to the pseudo elements.
+We use the calc() function to grow the elements by 100%, but since we offset the initial position we have to compensate for that so we add an extra 27px.
+Note: if you create a smaller or larger button, this value of 27px will change, so play around with the numbers until it aligns properly.
+*/
+
+
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #212534;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+/* ======================== */
+
+.cta {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 55px 18px;
+    position: absolute;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 4px));
+    width: 45px;
+    height: 45px;
+    background: #dc143c;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+}
+
+.cta:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta i {
+    margin-left: 5px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i {
+    transform: translateX(3px);
+}
+
+
+
+
+
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e2e9fb;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 55px;
+    color: #fff;
+}
+
+/* ======================== */
+
+.button {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color: #202231;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s,
+        border-radius .5s;
+}
+
+.button * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.icon {
+    opacity: 0;
+}
+
+.button:focus {
+    width: 30px;
+    background-color: #44c08a;
+    border-radius: 50%;
+}
+
+.button:focus .text {
+    opacity: 0;
+}
+
+.button:focus .icon {
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #212534;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+/* ======================== */
+/* Everything here is pretty straight forward so I don't think I have to explain.*/
+.button{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 3px solid 
+    #3c67e3;
+    border-radius: 10px;
+}
+
+.button:hover{
+    animation: pulsate 1s 
+    ease-in-out; /*The pulsate animation is added on hover. You could also add this on .button:focus and it will add it when clicking the button as well.*/
+}
+
+@keyframes pulsate {
+    /* 
+        Here we have two shadows. You can add as many as you want by using different offset values as long as you separate it with a comma.
+        The values are as follow: offset-x | offset-y | blur-radius | color
+    */
+    0%{
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+}
+
+

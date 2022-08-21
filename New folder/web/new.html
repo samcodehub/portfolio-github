@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.samcodehub.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: rgb(7, 105, 185);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+h1 {text-align: center
+   }
+h2 {
+    
+        position: absolute;
+        left: 235px;
+        top: 135px;
+      }
+      iframe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding: 33px;
+      }
+    h3 {text-align: center}
+    h4 {text-align: center}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                
+
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--Top menu -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="https://yt3.ggpht.com/3EDH4brPBT39FF_jCkWhFb7wR60scct-sGP_OIInM_gnnqinE3QEN70omQ7XXFshNqJdePLOpA=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="profile_picture">
+                <h3>SamCodeHub</h3>
+                <p>Python Programmer</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="new.html" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCMxVrec-3iTMxiEAsxTtZJg" target="_blank" >
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My YouTube Channel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" target="_blank">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Contact Me</span>
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="about.html" target="_blank">
+                        <span class="icon"><<i class="fa-solid fa-address-card"></i></span>
+                        <span class="item">About</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+           <!--profile image & text-->
+            <!--menu item-->
+        </div>
+
+    </div>
+     
+    <h1>Welcome to <b>SamCodeHub</b></h1>
+    <h2>On This Page You Can Watch Videos Of Python Programming Projects Plus Source Code</h2>
+   
+
+    <h3>How To Make A Graphic User Interface Calendar By Python</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sMqu0oCvLk"
+    title="youtube video player" frameborder="0" allow="accelerometer; 
+    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+     allowfullscreen></iframe>
+     <h4>tkcalendar is a python module that provides the Calendar and DateEntry widgets for Tkinter.</h4>
+     <h4>For Source Code Click here:</h4>
+
+  <script>
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+
+  </script>
+</body>
+</html>

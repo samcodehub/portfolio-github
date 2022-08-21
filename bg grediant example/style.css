@@ -1,0 +1,66 @@
+.box{
+    width:150px;
+    height:300px;
+    background-color: deeppink;
+    
+
+
+}
+
+.box1{
+    width:250px;
+    height:300px;
+    background-color: deeppink;
+    margin: 10px 10px;
+    
+}
+
+.box2{
+    width:150px;
+    height:300px;
+    background-color: deeppink;
+    margin: 10px 10px;
+    
+
+
+}
+
+.box3{
+    width:150px;
+    height:300px;
+    background-color: deeppink;
+    margin: 10px 10px;
+    
+
+
+}
+
+
+
+.bg-gradient{
+    background: linear-gradient(
+        to bottom,
+        blue,
+        red);
+}
+
+.bg-gradient1{
+    background: linear-gradient(
+        to top,
+        blue,
+        red);
+}
+
+.bg-gradient2{
+    background: linear-gradient(
+        to right,
+        blue,
+        red);
+}
+
+.bg-gradient3{
+    background: linear-gradient(
+        to left,
+        blue,
+        red);
+}

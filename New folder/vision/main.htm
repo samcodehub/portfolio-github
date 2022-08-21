@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    
+    <meta charset="UTF-8">
+    
+    <title>www.samcodehub.com</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="banner">
+        <div class="banner-text">
+            <h1>Welcome To SamCodeHub</h1>
+            <P>on this page you will find python programming projects with full source code included and videos to watch how it works</P>
+        </div>
+        <div class="banner-btn">
+            <a href="#"> <span></span><strong>Find Out</strong> </a>
+            <a href="#"> <span></span> <strong>Read More</strong> </a>
+        </div>
+
+    </section>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li> <a href="#">HOME</a></li>
+                <li> <a href="#">MY YOUTUBE CHANNEL</a> </li>
+                <li> <a href="#">CONTACT ME</a> </li>
+                <li> <a href="#">COMMENTS</a> </li>
+                <li> <a href="#">ABOUT</a> </li>            
+            </ul>
+        </nav>
+    </div>
+    <div id="menubtn">
+        <img src="photo/menu.png" id="menu">
+    </div>
+
+    <!--my youtube channel-->
+    <section id="youtube">
+        <div class="title-text">
+            <P>SUBSCRIBE MY CHANNEL:</P>
+            <h1>SamCodeHub</h1>
+        </div>
+        <div class="feature-box">
+            <div class="feature">
+                <h1>YOUTUBE LINK:</h1>
+                <p> <a href="https://www.youtube.com/channel/UCMxVrec-3iTMxiEAsxTtZJg" target="_blank">https://www.youtube.com/channel/UCMxVrec-3iTMxiEAsxTtZJg</a> </p>
+
+            </div>
+            <div class="feature-img">
+                <img src="photo/beauty.jpg" >
+
+            </div>
+
+        </div>
+    </section>
+
+  <div style="float: right; margin:0 100px 2px 220">
+    <iframe width="360" height="220" src="https://www.youtube.com/embed/2sMqu0oCvLk" title="YouTube video player" frameborder="50" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+        <h3>
+           1. How To Make A Calendar Graphic User Interface By Python Using tkinter tkcalendar library
+        </h3>
+       <p>tkcalendar is a python module that provides the Calendar and DateEntry widgets for Tkinter. The DateEntry widget is similar to a Combobox, but the drop-down is not a list but a Calendar to select a date. Events can be displayed in the Calendar with custom colors and a tooltip displays the event list for a given day.</p>
+    
+
+
+    
+
+
+
+
+
+
+
+    <script>
+        var menubtn= document.getElementById("menubtn")
+        var menu= document.getElementById("menu")
+        var sidenav= document.getElementById("sidenav")
+
+        sidenav.style.right = "-200px"
+
+        menubtn.onclick = function(){
+            if (sidenav.style.right == "-200px"){
+                sidenav.style.right = "0"
+                menu.src="photo/close.png";
+            }
+            else{
+                sidenav.style.right ="-200px"
+                menu.src="photo/menu.png";
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
