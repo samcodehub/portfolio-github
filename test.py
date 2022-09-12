@@ -7,9 +7,9 @@ import tkinter.messagebox as tkMessageBox
 
 
 root = Tk()
-root.title("Contact Management System")
-root.geometry("780x400+0+0")
-root.config(bg="Pink")
+root.title("Contact Management App")
+root.geometry("780x500+0+0")
+root.config(bg="#545c69")
 
 
 # Variables required for storing the values
@@ -47,7 +47,7 @@ def Database():
 
 #Function for exiting the system
 def Exit():
-    O = tkinter.messagebox.askyesno("Contact Management System", "Do you want to exit the system")
+    O = tkinter.messagebox.askyesno("Contact Management App", "Do you want to exit the app?")
     if O > 0:
         root.destroy()
     return
@@ -145,71 +145,6 @@ def UpdateContact(event):
     if 'Opennewwindow' in globals():
         opennewwindow.destroy()
 
-    # FRAMES
-    #module is for the frame, labels, text entry, and button for update contact form window
-    FormTitle = Frame(UpdateWindow)
-    FormTitle.pack(side=TOP)
-    ContactForm = Frame(UpdateWindow)
-    ContactForm.pack(side=TOP, pady=10)
-    RadioGroup = Frame(ContactForm)
-    Male = Radiobutton(RadioGroup, text="Male", variable=gender, value="Male", font=('arial', 14)).pack(side=LEFT)
-    Female = Radiobutton(RadioGroup, text="Female", variable=gender, value="Female", font=('arial', 14)).pack(side=LEFT)
-
-# LABELS
-    label_title = Label(FormTitle, text="Update the Contact Information", font=('Arial', 17), bg="light green", width=400)
-    label_title.pack(fill=X)
-    label_FirstName = Label(ContactForm, text="First Name", font=('Calibri', 14), bd=5)
-    label_FirstName.grid(row=0, sticky=W)
-
-    label_MiddleName = Label(ContactForm, text="Middle Name", font=('Calibri', 14), bd=5)
-    label_MiddleName.grid(row=1, sticky=W)
-
-    label_LastName = Label(ContactForm, text="Last Name", font=('Calibri', 14), bd=5)
-    label_LastName.grid(row=2, sticky=W)
-
-    label_Gender = Label(ContactForm, text="Gender", font=('Calibri', 14), bd=5)
-    label_Gender.grid(row=3, sticky=W)
-
-    label_Age = Label(ContactForm, text="Age", font=('Calibri', 14), bd=5)
-    label_Age.grid(row=4, sticky=W)
-
-    label_HomeAddress = Label(ContactForm, text=" Home Address", font=('Calibri', 14), bd=5)
-    label_HomeAddress.grid(row=5, sticky=W)
-
-    label_PhoneNumber = Label(ContactForm, text="Phone Number", font=('Calibri', 14), bd=5)
-    label_PhoneNumber.grid(row=6, sticky=W)
-
-
-
-# TEXT ENTRY
-    FirstName = Entry(ContactForm, textvariable=f_name, font=('Calibri', 14, 'bold'),bd=2, width=20, justify='left')
-    FirstName.grid(row=0, column=1)
-
-    MiddleName = Entry(ContactForm, textvariable=m_name, font=('Calibri', 14, 'bold'), bd=2, width=20, justify='left')
-    MiddleName.grid(row=1, column=1)
-
-    LastName = Entry(ContactForm, textvariable=l_name, font=('Calibri', 14, 'bold'), bd=2, width=20, justify='left')
-    LastName.grid(row=2, column=1)
-
-    RadioGroup.grid(row=3, column=1)
-
-    Age = Entry(ContactForm, textvariable=age, font=('Calibri', 14, 'bold'), bd=2, width=20, justify='left')
-    Age.grid(row=4, column=1)
-
-    HomeAddress = Entry(ContactForm, textvariable=home_address, font=('Calibri', 14, 'bold'), bd=2, width=20,
-    justify='left')
-    HomeAddress.grid(row=5, column=1)
-
-    PhoneNumber = Entry(ContactForm, textvariable=phone_number, font=('Calibri', 14, 'bold'), bd=2, width=20,
-    justify='left')
-    PhoneNumber.grid(row=6, column=1)
-
-#  Buttons
-    ButtonUpdatContact = Button(ContactForm, text='Update', bd=2, font=('Calibri', 14, 'bold'), fg="black",
-    bg="lightgreen", command=Update)
-    ButtonUpdatContact.grid(row=8, columnspan=2, pady=10)
-
-
 #Delete query for deleting the value
 def Delete():
     if not tree.selection():
@@ -255,7 +190,7 @@ def MyNewContact():
     Male = Radiobutton(RadioGroup, text="Male", variable=gender, value="Male", font=('Calibri', 14)).pack(side=LEFT)
     Female = Radiobutton(RadioGroup, text="Female", variable=gender, value="Female", font=('Calibri', 14)).pack(side=LEFT)
     # ===================LABELS==============================
-    label_title = Label(FormTitle, text="Adding New Contacts", bd=12,  fg="black", bg="Lightgreen",
+    label_title = Label(FormTitle, text="Adding New Contacts", bd=12,  fg="black", bg="gainsboro",
     font=("Calibri", 15, "bold"), pady=2)
     label_title.pack(fill=X)
     label_FirstName = Label(ContactForm, text="First Name", font=('Calibri', 14), bd=5)
@@ -312,9 +247,9 @@ def MyNewContact():
 # ============================FRAMES======================================
 Top = Frame(root, width=600, bd=1)
 Top.pack(side=TOP)
-M = Frame(root, width=650, bg="pink")
+M = Frame(root, width=650, bg="#2d2d30")
 M.pack(side=BOTTOM)
-F = Frame(width=7, height=8, bd=10, bg="pink")
+F = Frame(width=7, height=8, bd=10, bg="#545c69")
 F.pack(side=BOTTOM)
 MR = Frame(M, width=100)#Right Middle frame
 MR.pack(side=RIGHT, pady=10)
@@ -322,20 +257,20 @@ TableMargin = Frame(root, width=500)
 TableMargin.pack(side=TOP)
 
 # LABELS
-label_title = Label(Top, text="Contact System", bd=7, relief=GROOVE, fg="Black", bg="lightgreen",
+label_title = Label(Top, text="Contact Data", bd=7, relief=GROOVE, fg="white", bg="teal",
 font=("Calibri", 25, "bold"), pady=3)
 label_title.pack(fill=X)
 
 
 # BUTTONS
 Add_Button = Button(F, text='Add New Contact', font=('Calibri',17, 'bold'), fg="black",
-bg="lightgreen", command=MyNewContact).grid(row=0, column=0, ipadx=20, padx=30)
+bg="#abd656", command=MyNewContact).grid(row=0, column=0, ipadx=20, padx=30)
 
 Delete_Button = Button(F, text='Delete The Contact', font=('Calibri', 17, 'bold'), command=Delete,
-fg="black", bg="lightgreen").grid(row=0, column=1, ipadx=20)
+fg="black", bg="#ed5e68").grid(row=0, column=1, ipadx=20)
 
 Exit_Button = Button(F, text='Exit System', font=('Calibri', 17, 'bold'), command=Exit,
-fg="black", bg="lightgreen").grid(row=0, column=2, ipadx=20, padx=30)
+fg="black", bg="#026b54").grid(row=0, column=2, ipadx=20, padx=30)
 
 #creating a tables in contact management system
 scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
